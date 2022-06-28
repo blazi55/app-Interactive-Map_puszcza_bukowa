@@ -1,0 +1,2262 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    
+}
+
+/* display: block; jak cos */
+
+body, html {
+    background-color: aliceblue;
+    background-size: auto;
+    background-attachment: fixed;
+    height: 100%;
+    width: 100%;
+    
+}
+
+a {
+    color: #d2691e;
+    text-decoration: none;
+}
+
+/* Strona główna i podstawa dla wszystkich oraz to co góry */
+
+#block {
+    width: 100%;
+    height: 40%;
+    margin: 0% auto;
+    position: relative;
+}
+
+#headline {
+    background-color: rgb(41, 146, 88, 0.9);
+    background-image: url('inne_obrazki/rysunek.svg');
+    width: 100%;
+    height: 52px;
+    margin-top: 15%;
+    box-shadow:   -6px 11px 13px 0px rgba(48, 50, 50, 0.87);
+    text-shadow: 0px 0px 0 rgb(145,106,0),
+                 1px 1px 0 rgb(76,37,0),
+                 2px 2px  0 rgb(7,-32,0),
+                 3px 3px 2px rgba(0,0,0,0.45),
+                 3px 3px 1px rgba(0,0,0,0.5),
+                 0px 0px 2px rgba(0,0,0,.2);
+    margin: 0 auto;
+    position: relative;
+}
+
+#second_background {
+    background-color: rgb(160, 199, 156);
+    width: 100%;
+    height: 100%;
+    margin-top: 15%;
+    margin-bottom: 50px;
+    margin: 0 auto;
+    
+}
+
+#second_background_autor {
+    background-color: rgb(160, 199, 156);
+    width: 100%;
+    height: 100%;
+    margin-top: 15%;
+    margin-bottom: 50px;
+    margin: 0 auto;
+    
+}
+
+#help_background {
+    background-color: rgb(170, 127, 19, 0.95);
+    border: 2px solid rgba(50, 50, 50, 0.90);
+    width: 30%;
+    height: 6%;
+    margin-top: 7%;
+    margin-left: 32.5%;
+    font-size: 20px;
+    text-align: center;
+    font-family: "Arial Black", Gadget, sans-serif;
+    color: #d2691e;
+    text-shadow: 0px 0px 0 rgb(166,104,0),
+                 1px 1px 0 rgb(77,15,0),
+                 2px 2px  0 rgb(-12,-74,0),
+                 3px 3px 2px rgba(0,0,0,0.42),
+                 3px 3px 1px rgba(0,0,0,0.5),
+                 0px 0px 2px rgba(0,0,0,.2);
+    box-shadow: 0px 2px 14px 0px rgba(39, 50, 50, 1);
+    position: absolute;
+}
+
+#help_background:hover {
+  cursor: pointer;
+  opacity: 0.8;
+  transform: translate(10px, 5px);
+}
+
+#text_help {
+  background: rgb(74,164,71);
+  background: linear-gradient(147deg, rgba(74,164,71,1) 22%, rgba(28,83,46,1) 100%);
+  width: 100%;
+  height: 100%;
+  font-size: 22px;
+  text-align: center;
+  color: #d2691e;
+  text-shadow: 0px 0px 0 rgb(154,98,0),
+               1px 0px  0 rgb(71,15,0),
+               2px 0px 1px rgba(0,0,0,0.55),
+               2px 0px 1px rgba(0,0,0,0.5),
+               0px 0px 1px rgba(0,0,0,.2);
+}
+
+
+
+a.name:link {
+    color: black;
+}
+
+
+#element_1 {
+    background-image: url('zdjecia/IMG_0792.JPG');
+    background-color: rgb(170, 127, 19, 0.95);
+    background-size: cover;
+    border: 2px solid rgba(50, 50, 50, 0.90);
+    width: 25%;
+    height: 50%;
+    margin-top: 10%;
+    margin-left: 7%;
+    font-size: 30px;
+    font-family: "Arial Black", Gadget, sans-serif;
+    color: #d2691e;
+    text-shadow: 0px 0px 0 rgb(166,104,0),
+                 1px 1px 0 rgb(77,15,0),
+                 2px 2px  0 rgb(-12,-74,0),
+                 3px 3px 2px rgba(0,0,0,0.42),
+                 3px 3px 1px rgba(0,0,0,0.5),
+                 0px 0px 2px rgba(0,0,0,.2);
+    box-shadow: 0px 2px 14px 0px rgba(39, 50, 50, 1);
+    position: absolute;
+}
+
+#element_2 {
+    background-image: url('inne_obrazki/tło_legendy_przycisk.jpg');
+    background-color: rgb(170, 127, 19, 0.95);
+    background-size: contain;
+    border: 2px solid rgba(50, 50, 50, 0.90);
+    width: 25%;
+    height: 50%;
+    margin-top: 10%;
+    margin-left: 67%;
+    font-size: 20px;
+    text-align: center;
+    font-family: "Arial Black", Gadget, sans-serif;
+    color: #d2691e;
+    text-shadow: 0px 0px 0 rgb(166,104,0),
+                 1px 1px 0 rgb(77,15,0),
+                 2px 2px  0 rgb(-12,-74,0),
+                 3px 3px 2px rgba(0,0,0,0.42),
+                 3px 3px 1px rgba(0,0,0,0.5),
+                 0px 0px 2px rgba(0,0,0,.2);
+    box-shadow: 0px 2px 14px 0px rgba(39, 50, 50, 1);
+    position: absolute;
+    
+}
+
+#element_3 {
+    background-image: url('zdjecia/IMG_9920.JPG');
+    background-color: rgb(170, 127, 19, 0.95);
+    background-size: cover;
+    border: 2px solid rgba(50, 50, 50, 0.90);
+    width: 25%;
+    height: 50%;
+    margin-top: 10%;
+    margin-left: 37%;
+    font-size: 20px;
+    text-align: center;
+    font-family: "Arial Black", Gadget, sans-serif;
+    color: #d2691e;
+    text-shadow: 0px 0px 0 rgb(166,104,0),
+                 1px 1px 0 rgb(77,15,0),
+                 2px 2px  0 rgb(-12,-74,0),
+                 3px 3px 2px rgba(0,0,0,0.42),
+                 3px 3px 1px rgba(0,0,0,0.5),
+                 0px 0px 2px rgba(0,0,0,.2);
+    box-shadow: 0px 2px 14px 0px rgba(39, 50, 50, 1);
+    position: absolute;
+    
+}
+
+/* ale jednak nie*/
+@keyframes slidein {
+  from {
+    margin-left: 10%;
+    width: 10%;
+  }
+
+  75% {
+    font-size: 10%;
+    margin-left: 25%;
+    width: 10%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 10%;
+  }
+}
+
+#text2 {
+  background: rgb(74,164,71);
+  background: linear-gradient(147deg, rgba(74,164,71,1) 22%, rgba(28,83,46,1) 100%);
+  width: 100%;
+  font-size: 30px;
+  text-align: center;
+  color: #d2691e;
+  text-shadow: 0px 0px 0 rgb(154,98,0),
+               1px 0px  0 rgb(71,15,0),
+               2px 0px 1px rgba(0,0,0,0.55),
+               2px 0px 1px rgba(0,0,0,0.5),
+               0px 0px 1px rgba(0,0,0,.2);
+}
+
+#text3 {
+  background: rgb(74,164,71);
+  background: linear-gradient(147deg, rgba(74,164,71,1) 22%, rgba(28,83,46,1) 100%);
+  width: 100%;
+  font-size: 30px;
+  text-align: center;
+  color: #d2691e;
+  text-shadow: 0px 0px 0 rgb(154,98,0),
+               1px 0px  0 rgb(71,15,0),
+               2px 0px 1px rgba(0,0,0,0.55),
+               2px 0px 1px rgba(0,0,0,0.5),
+               0px 0px 1px rgba(0,0,0,.2);
+}
+
+#element_1:hover {
+    cursor: pointer;
+    opacity: 0.7;
+    transform: translate(10px, 5px);
+}
+
+#element_2:hover  {
+    cursor: pointer;
+    opacity: 0.7;
+    transform: translate(10px, 5px);
+}
+
+#element_3:hover {
+    cursor: pointer;
+    opacity: 0.7;
+    transform: translate(10px, 5px);
+}
+
+/* Strona o autorze */
+
+#my_text2 {
+  background: rgb(74,164,71, 0.9);
+  border: #413a3a 0.7px solid ;
+  padding: 25px;
+  width: 55%;
+  height: 70%;
+  position: absolute;
+  margin-left: 36%;
+  margin-top: 5%;
+  text-shadow: 0 1px 0 rgb(80, 77, 77);
+  font-family: Gill Sans, sans-serif;
+  box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.90);
+  font-size: 130%;
+  overflow-y: scroll;
+}
+
+/* width */
+#my_text2::-webkit-scrollbar {
+  width: 17px;
+  background-color: #c9c9c9;
+}
+
+  /* Track */
+  #my_text2::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+}
+
+  /* Handle */
+  #my_text2::-webkit-scrollbar-thumb {
+  background: #ce8a30;
+}
+
+#Gotów{
+  background: rgb(74,164,71);
+  background: linear-gradient(147deg, rgba(74,164,71,1) 22%, rgba(28,83,46,1) 100%);
+  width: 21%;
+  height: 7%;
+  position: absolute;
+  margin-left: 6%;
+  font-size: 20px;
+  color: #d2691e;
+  text-shadow: 0px 0px 0 rgb(154,98,0),
+               1px 0px  0 rgb(71,15,0),
+               2px 0px 1px rgba(0,0,0,0.55),
+               2px 0px 1px rgba(0,0,0,0.5),
+               0px 0px 1px rgba(0,0,0,.2);
+  box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.90);
+  border-radius: 20px;
+  transition: color 0.1s;
+}
+
+#Gotów:hover {
+  cursor: pointer;
+  opacity: 0.8;
+  transform: translate(10px, 5px) ;
+}
+
+#exit_author {
+    background: rgb(74,164,71);
+    background: linear-gradient(147deg, rgba(74,164,71,1) 22%, rgba(28,83,46,1) 100%);
+    width: 20%;
+    height: 5%;
+    position: absolute;
+    margin-left: 9%;
+    margin-top: 7%;
+    font-size: 20px;
+    color: #d2691e;
+    text-shadow: 0px 0px 0 rgb(154,98,0),
+                 1px 0px  0 rgb(71,15,0),
+                 2px 0px 1px rgba(0,0,0,0.55),
+                 2px 0px 1px rgba(0,0,0,0.5),
+                 0px 0px 1px rgba(0,0,0,.2);
+    box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.90);
+    border-radius: 20px;
+    transition: color 0.1s;
+}
+
+#exit_author:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    transform: translate(10px, 5px) ;
+}
+
+@media only screen and (min-width: 1000px) {
+
+#my_photo {
+    background: rgb(74,164,71);
+    background-image:  url('inne_obrazki./myfoto.JPG');
+    background-size: contain;
+    width: 14%;
+    height: 40%;
+    position: absolute;
+    margin-left: 12%;
+    margin-top: 16%;
+    text-shadow: 0 1px 0 rgb(80, 77, 77);
+    box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.90);
+}
+
+#my_text {
+  background: rgba(76, 177, 72, 0.9);
+  border: #413a3a 0.7px solid ;
+  width: 25%;
+  height: 56%;
+  position: fixed;
+  margin-left: 6%;
+  margin-top: 12%;
+  text-shadow: 0 1px 0 rgb(80, 77, 77);
+  box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.90);
+}
+
+#my_text_2 {
+  font-size: 19px;
+  font-family: Gill Sans, sans-serif;
+  text-align-last: center;
+}
+}
+
+ /* Strona mapy */
+
+  #exit_map {
+    background: rgb(74,164,71);
+    background: linear-gradient(147deg, rgba(74,164,71,1) 22%, rgba(28,83,46,1) 100%);
+    width: 20%;
+    height: 5%;
+    position: absolute;
+    margin-left: 5%;
+    margin-top: 5%;
+    font-size: 20px;
+    color: #d2691e;
+    text-shadow: 0px 0px 0 rgb(154,98,0),
+                 1px 0px  0 rgb(71,15,0),
+                 2px 0px 1px rgba(0,0,0,0.55),
+                 2px 0px 1px rgba(0,0,0,0.5),
+                 0px 0px 1px rgba(0,0,0,.2);
+    box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.90);
+    border-radius: 20px;
+    transition: color 0.1s;
+  }
+
+  #exit_map:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    transform: translate(10px, 5px) ;
+  }
+
+  /* Strona "Puszczy Bukowej?" */
+
+  #exit_puszcza {
+    background: rgb(74,164,71);
+    background: linear-gradient(147deg, rgba(74,164,71,1) 22%, rgba(28,83,46,1) 100%);
+    width: 20%;
+    height: 5%;
+    position: absolute;
+    margin-left: 5.5%;
+    margin-top: 1.8%;
+    font-size: 20px;
+    color: #d2691e;
+    text-shadow: 0px 0px 0 rgb(154,98,0),
+                 1px 0px  0 rgb(71,15,0),
+                 2px 0px 1px rgba(0,0,0,0.55),
+                 2px 0px 1px rgba(0,0,0,0.5),
+                 0px 0px 1px rgba(0,0,0,.2);
+    box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.90);
+    border-radius: 20px;
+    transition: color 0.1s;
+  }
+
+  #exit_puszcza:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    transform: translate(10px, 5px) ;
+  }
+
+  #block_in_puszcza{
+    background-image: url('dokumentacja/14006.21.JPG');
+    background-size: cover;
+    border: 1px solid rgba(50, 50, 50, 0.90);
+    width: 93%;
+    height: 73%;
+    position: absolute;
+    padding: 13px;
+    margin-left: 3%;
+    margin-top: 5.5%;
+    box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.90);
+    font-size: 135%;
+    font-family: Gill Sans, sans-serif;
+    overflow-y: scroll;
+
+  }
+
+    /* width */
+  #block_in_puszcza::-webkit-scrollbar {
+    width: 17px;
+    background-color: #c9c9c9;
+  }
+  
+    /* Track */
+  #block_in_puszcza::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+  }
+
+    /* Handle */
+  #block_in_puszcza::-webkit-scrollbar-thumb {
+    background: #ce8a30;
+  }
+  
+  /* Strona Map */
+
+  #text1 {
+    background-color: rgb(41, 146, 88, 0.9);
+    font-size: 26px;
+    color: #d2691e;
+    text-align: center;
+    text-shadow: 0px 0px 0 rgb(154,98,0),
+                 1px 0px  0 rgb(71,15,0),
+                 2px 0px 1px rgba(0,0,0,0.55),
+                 2px 0px 1px rgba(0,0,0,0.5),
+                 0px 0px 1px rgba(0,0,0,.2);
+  }
+
+  #text4 {
+    background-color: rgb(41, 146, 88, 0.9);
+    padding-top: 10px;
+    width: 100%;
+    height: 10%;
+    font-size: 25px;
+    color: #d2691e;
+    text-align: center;
+    text-shadow: 0px 0px 0 rgb(154,98,0),
+                 1px 0px  0 rgb(71,15,0),
+                 2px 0px 1px rgba(0,0,0,0.55),
+                 2px 0px 1px rgba(0,0,0,0.5),
+                 0px 0px 1px rgba(0,0,0,.2);
+    box-shadow: -1px 5px 5px -2px rgba(50, 50, 50, 0.90);
+  }
+
+  #map_one_in_mapy {
+      background-image: url('zdjecia/mapa_ogolna.jpg');
+      background-size: cover;
+      border: 2.5px solid rgba(77, 73, 64, 1);
+      margin-top: 5%;
+      margin-left: 32%;
+      width: 32%;
+      height: 35%;
+      box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.90);
+      position: absolute;
+  }
+
+  #map_one_in_mapy:hover {
+    cursor: pointer;
+    transform: translate(10px, 5px) ;
+  }
+
+  #map_two_in_mapy {
+    background-image: url('zdjecia/IMG_0399.JPG');
+    background-size: cover;
+    border: 2.5px solid rgba(77, 73, 64, 1);
+    margin-top: 21%;
+    margin-left: 32%;
+    width: 32%;
+    height: 35%;
+    box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.90);
+    position: absolute;
+}
+
+  #map_two_in_mapy:hover {
+    cursor: pointer;
+    transform: translate(10px, 5px) ;
+  }
+
+  #map_three_in_mapy {
+    background-image: url('zdjecia/mapa_szlakow.jpg');
+    background-size: cover;
+    border: 2.5px solid rgba(77, 73, 64, 1);
+    margin-top: 21%;
+    margin-left: 66%;
+    width: 32%;
+    height: 35%;
+    box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.90);
+    position: absolute;
+  }
+
+  #map_three_in_mapy:hover {
+  cursor: pointer;
+  transform: translate(10px, 5px) ;
+  }
+
+  #map_four_in_mapy{
+    background-image: url('zdjecia/mapa_ortofotomapa.jpg');
+    background-size: cover;
+    border: 2.5px solid rgba(77, 73, 64, 1);
+    margin-top: 5%;
+    margin-left: 66%;
+    width: 32%;
+    height: 35%;
+    box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.90);
+    position: absolute;
+  }
+
+  #map_four_in_mapy:hover {
+  cursor: pointer;
+  transform: translate(10px, 5px) ;
+  }
+
+  #blok_pod_mapami_legend {
+    background: rgb(74,164,71, 0.8);
+    width: 87%;
+    height: 73%;
+    position: absolute;
+    margin-top: 8%;
+    margin-left: 5%;
+    text-shadow: 0 1px 0 rgb(80, 77, 77);
+    box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.90);
+  }
+
+  #blok_pod_mapami {
+    background: rgb(74,164,71, 0.8);
+    width: 87%;
+    height: 73%;
+    position: absolute;
+    margin-top: 8%;
+    margin-left: 5%;
+    text-shadow: 0 1px 0 rgb(80, 77, 77);
+    box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.90);
+  }
+
+  #blok_pod_blokiem_mapami {
+    background: rgba(62, 136, 59, 0.8);
+    width: 30%;
+    height: 100%;
+    position: absolute;
+    text-shadow: 0 1px 0 rgb(80, 77, 77);
+    box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.90);
+  }
+
+  #to_map1 {
+    background: rgb(22, 114, 53);
+    justify-content: space-evenly;
+    width: 25%;
+    height: 10%;
+    position: absolute;
+    margin-left: 3%;
+    margin-top: 8%;
+    border: 2px solid rgba(50, 50, 50, 0.90);
+    box-shadow: 6px 6px 4px 0px rgba(50, 50, 50, 0.90);
+    transition: color 0.1s;
+    font-size: 100%;
+    color: #d2691e;
+    text-shadow: 0px 0px 0 rgb(154,98,0),
+                 1px 0px  0 rgb(71,15,0),
+                 2px 0px 1px rgba(0,0,0,0.55),
+                 2px 0px 1px rgba(0,0,0,0.5),
+                 0px 0px 1px rgba(0,0,0,.2);
+  }
+
+  #to_map1:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    transform: translate(10px, 5px) ;
+  }
+
+  #to_map2 {
+    background: rgb(22, 114, 53);
+    width: 25%;
+    height: 10%;
+    position: absolute;
+    margin-left: 3%;
+    margin-top: 14%;
+    border: 2px solid rgba(50, 50, 50, 0.90);
+    box-shadow: 6px 6px 4px 0px rgba(50, 50, 50, 0.90);
+    transition: color 0.1s;
+    font-size: 100%;
+    color: #d2691e;
+    text-shadow: 0px 0px 0 rgb(154,98,0),
+                 1px 0px  0 rgb(71,15,0),
+                 2px 0px 1px rgba(0,0,0,0.55),
+                 2px 0px 1px rgba(0,0,0,0.5),
+                 0px 0px 1px rgba(0,0,0,.2);
+  }
+
+  #to_map2:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    transform: translate(10px, 5px) ;
+  }
+
+  #to_map3 {
+    background: rgb(22, 114, 53);
+    width: 25%;
+    height: 10%;
+    position: absolute;
+    margin-left: 3%;
+    margin-top: 20%;
+    border: 2px solid rgba(50, 50, 50, 0.90);
+    box-shadow: 6px 6px 4px 0px rgba(50, 50, 50, 0.90);
+    transition: color 0.1s;
+    font-size: 100%;
+    color: #d2691e;
+    text-shadow: 0px 0px 0 rgb(154,98,0),
+                 1px 0px  0 rgb(71,15,0),
+                 2px 0px 1px rgba(0,0,0,0.55),
+                 2px 0px 1px rgba(0,0,0,0.5),
+                 0px 0px 1px rgba(0,0,0,.2);
+  }
+
+  #to_map3:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    transform: translate(10px, 5px) ;
+  }
+
+  #to_map4 {
+    background: rgb(22, 114, 53);
+    width: 25%;
+    height: 10%;
+    position: absolute;
+    margin-left: 3%;
+    margin-top: 26.5%;
+    border: 2px solid rgba(50, 50, 50, 0.90);
+    box-shadow: 6px 6px 4px 0px rgba(50, 50, 50, 0.90);
+    transition: color 0.1s;
+    font-size: 100%;
+    color: #d2691e;
+    text-shadow: 0px 0px 0 rgb(154,98,0),
+                 1px 0px  0 rgb(71,15,0),
+                 2px 0px 1px rgba(0,0,0,0.55),
+                 2px 0px 1px rgba(0,0,0,0.5),
+                 0px 0px 1px rgba(0,0,0,.2);
+  }
+
+  #to_map4:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    transform: translate(10px, 5px) ;
+  }
+
+  #exit_map {
+    background: rgb(74,164,71);
+    background: linear-gradient(147deg, rgba(74,164,71,1) 22%, rgba(28,83,46,1) 100%);
+    width: 20%;
+    height: 5%;
+    position: absolute;
+    margin-left: 7%;
+    margin-top: 4%;
+    font-size: 20px;
+    color: #d2691e;
+    text-shadow: 0px 0px 0 rgb(154,98,0),
+                 1px 0px  0 rgb(71,15,0),
+                 2px 0px 1px rgba(0,0,0,0.55),
+                 2px 0px 1px rgba(0,0,0,0.5),
+                 0px 0px 1px rgba(0,0,0,.2);
+    box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.90);
+    border-radius: 20px;
+    transition: color 0.1s;
+  }
+
+  #exit_map:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    transform: translate(10px, 5px) ;
+  }
+
+  #legenda_przejscie {
+    background: rgb(74,164,71);
+    background: linear-gradient(147deg, rgba(74,164,71,1) 22%, rgba(28,83,46,1) 100%);
+    width: 20%;
+    height: 5%;
+    position: absolute;
+    margin-left: 37%;
+    margin-top: 4%;
+    font-size: 20px;
+    color: #d2691e;
+    text-shadow: 0px 0px 0 rgb(154,98,0),
+                 1px 0px  0 rgb(71,15,0),
+                 2px 0px 1px rgba(0,0,0,0.55),
+                 2px 0px 1px rgba(0,0,0,0.5),
+                 0px 0px 1px rgba(0,0,0,.2);
+    box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.90);
+    border-radius: 20px;
+    transition: color 0.1s;
+  }
+
+  #legenda_przejscie:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    transform: translate(10px, 5px) ;
+  }
+
+  #dlaczego_puszcza {
+    background: rgb(74,164,71);
+    background: linear-gradient(147deg, rgba(74,164,71,1) 22%, rgba(28,83,46,1) 100%);
+    width: 20%;
+    height: 5%;
+    position: absolute;
+    margin-left: 67%;
+    margin-top: 4%;
+    font-size: 20px;
+    color: #d2691e;
+    text-shadow: 0px 0px 0 rgb(154,98,0),
+                 1px 0px  0 rgb(71,15,0),
+                 2px 0px 1px rgba(0,0,0,0.55),
+                 2px 0px 1px rgba(0,0,0,0.5),
+                 0px 0px 1px rgba(0,0,0,.2);
+    box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.90);
+    border-radius: 20px;
+    transition: color 0.1s;
+  }
+
+  #dlaczego_puszcza:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    transform: translate(10px, 5px) ;
+  }
+
+  /*Strona mapy pierwszej */
+
+  #przycisk{
+    text-shadow: 0px 0px 0 rgb(154,98,0),
+                 1px 0px  0 rgb(71,15,0),
+                 1px 0px 1px rgba(0,0,0,0.55),
+                 2px 0px 1px rgba(0,0,0,0.5),
+                 0px 0px 1px rgba(0,0,0,.2);
+    color: #d2691e;
+    font-size: 20px;
+  }
+
+  #przycisk:hover {
+    opacity: 0.6;
+  }
+
+  .info {
+    display: block;
+    padding: 6px 8px;
+    font: 14px/16px Arial, Helvetica, sans-serif;
+    background: white;
+    background: rgba(255,255,255,0.8);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 5px;
+	}
+	.info h3 {
+    margin: 0 0 5px;
+    color: #d2691e;
+	}
+
+  #first_map {
+      width: 100%;
+      height: 100%;
+      box-shadow: 15px 15px 5px 17px rgba(50, 50, 50, 0.90);
+      position: absolute;
+      background-size: cover;
+      max-zoom: 100%;
+  } 
+
+  
+  
+  /*Strona mapy drugiej */
+
+  #second_map {
+    width: 100%;
+    height: 100%;
+    box-shadow: 15px 15px 5px 17px rgba(50, 50, 50, 0.90);
+    position: absolute;
+    background-size: cover;
+    max-zoom: 100%;
+} 
+
+  
+   /*Strona mapy trzeciej */
+
+   #third_map {
+      width: 100%;
+      height: 100%;
+      box-shadow: 15px 15px 5px 17px rgba(50, 50, 50, 0.90);
+      position: absolute;
+      background-size: cover;
+      max-zoom: 100%;
+
+  } 
+
+  /*Strona mapy czwartej */
+
+  #four_map {
+    width: 100%;
+      height: 100%;
+      box-shadow: 15px 15px 5px 17px rgba(50, 50, 50, 0.90);
+      position: absolute;
+      background-size: cover;
+      max-zoom: 100%;
+
+  } 
+  /*Strona Legenda */
+
+  #nacisnij {
+    text-align: center;
+    font-size: 17px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+
+  #blok1 {
+    background-image: url('sygantury/kosciol.svg');
+    background-color: antiquewhite;
+    width: 6.5%;
+    height: 10%;
+    border: 2px solid rgba(50, 50, 50, 0.90);
+    box-shadow: 6px 6px 4px 0px rgba(50, 50, 50, 0.90);
+    margin-top: 1%;
+    margin-left: 5%;
+    position: absolute;
+    background-size: contain;
+    transition: color 0.1s;
+
+  }
+
+  #blok1:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    transform: translate(10px, 5px) ;
+  }
+  
+  #blok2 {
+    background-image: url('sygantury/cmentarz_wojenny.svg');
+    background-color: antiquewhite;
+    width: 6.5%;
+    height: 10%;
+    border: 2px solid rgba(50, 50, 50, 0.90);
+    box-shadow: 6px 6px 4px 0px rgba(50, 50, 50, 0.90);
+    margin-top: 7%;
+    margin-left: 5%;
+    position: absolute;
+    background-size: contain;
+    transition: color 0.1s;
+
+  }
+
+  #blok2:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    transform: translate(10px, 5px) ;
+  }
+
+  #blok3 {
+    background-image: url('sygantury/podkowa.svg');
+    background-color: antiquewhite;
+    width: 6.5%;
+    height: 10%;
+    border: 2px solid rgba(50, 50, 50, 0.90);
+    box-shadow: 6px 6px 4px 0px rgba(50, 50, 50, 0.90);
+    margin-top: 13%;
+    margin-left: 5%;
+    position: absolute;
+    background-size: contain;
+    transition: color 0.1s;
+
+  }
+
+  #blok3:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    transform: translate(10px, 5px) ;
+  }
+
+  #blok4 {
+    background-image: url('sygantury/strzelnica.svg');
+    background-color: antiquewhite;
+    width: 6.5%;
+    height: 10%;
+    border: 2px solid rgba(50, 50, 50, 0.90);
+    box-shadow: 6px 6px 4px 0px rgba(50, 50, 50, 0.90);
+    margin-top: 19%;
+    margin-left: 5%;
+    position: absolute;
+    background-size: contain;
+    transition: color 0.1s;
+
+  }
+
+  #blok4:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    transform: translate(10px, 5px) ;
+  }
+
+  #blok5 {
+    background-image: url('sygantury/ogrod_dendrologiczny.svg');
+    background-color: antiquewhite;
+    width: 6.5%;
+    height: 10%;
+    border: 2px solid rgba(50, 50, 50, 0.90);
+    box-shadow: 6px 6px 4px 0px rgba(50, 50, 50, 0.90);
+    margin-top: 25%;
+    margin-left: 5%;
+    position: absolute;
+    background-size: contain;
+    transition: color 0.1s;
+
+  }
+
+  #blok5:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    transform: translate(10px, 5px) ;
+  }
+
+  #blok6 {
+    background-image: url('sygantury/wieza_kolowo.svg');
+    background-color: antiquewhite;
+    width: 6.5%;
+    height: 10%;
+    border: 2px solid rgba(50, 50, 50, 0.90);
+    box-shadow: 6px 6px 4px 0px rgba(50, 50, 50, 0.90);
+    margin-top: 1%;
+    margin-left: 19%;
+    position: absolute;
+    background-size: cover;
+    transition: color 0.1s;
+
+  }
+
+  #blok6:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    transform: translate(10px, 5px) ;
+  }
+
+  #blok7 {
+    background-image: url('sygantury/widok.svg');
+    background-color: antiquewhite;
+    width: 6.5%;
+    height: 10%;
+    border: 2px solid rgba(50, 50, 50, 0.90);
+    box-shadow: 6px 6px 4px 0px rgba(50, 50, 50, 0.90);
+    margin-top: 7%;
+    margin-left: 19%;
+    position: absolute;
+    background-size: contain;
+    transition: color 0.1s;
+
+  }
+
+  #blok7:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    transform: translate(10px, 5px) ;
+  }
+
+  #blok8 {
+    background-image: url('sygantury/ognisko.svg');
+    background-color: antiquewhite;
+    width: 6.5%;
+    height: 10%;
+    border: 2px solid rgba(50, 50, 50, 0.90);
+    box-shadow: 6px 6px 4px 0px rgba(50, 50, 50, 0.90);
+    margin-top: 13%;
+    margin-left: 19%;
+    position: absolute;
+    background-size: contain;
+    transition: color 0.1s;
+
+  }
+
+  #blok8:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    transform: translate(10px, 5px) ;
+  }
+
+  #blok9 {
+    background-image: url('sygantury/plaza.svg');
+    background-color: antiquewhite;
+    width: 6.5%;
+    height: 10%;
+    border: 2px solid rgba(50, 50, 50, 0.90);
+    box-shadow: 6px 6px 4px 0px rgba(50, 50, 50, 0.90);
+    margin-top: 19%;
+    margin-left: 19%;
+    position: absolute;
+    background-size: contain;
+    transition: color 0.1s;
+
+  }
+
+  #blok9:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    transform: translate(10px, 5px) ;
+  }
+
+  #blok10 {
+    background-image: url('sygantury/golf_point.svg');
+    background-color: antiquewhite;
+    width: 6.5%;
+    height: 10%;
+    border: 2px solid rgba(50, 50, 50, 0.90);
+    box-shadow: 6px 6px 4px 0px rgba(50, 50, 50, 0.90);
+    margin-top: 25%;
+    margin-left: 19%;
+    position: absolute;
+    background-size: contain;
+    transition: color 0.1s;
+
+  }
+
+  #blok10:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    transform: translate(10px, 5px) ;
+  }
+  
+  #blok11 {
+    background-image: url('sygantury/lisciasty.svg');
+    background-color: antiquewhite;
+    width: 6.5%;
+    height: 10%;
+    border: 2px solid rgba(50, 50, 50, 0.90);
+    box-shadow: 6px 6px 4px 0px rgba(50, 50, 50, 0.90);
+    margin-top: 1%;
+    margin-left: 33%;
+    position: absolute;
+    background-size: contain;
+    transition: color 0.1s;
+
+  }
+
+  #blok11:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    transform: translate(10px, 5px) ;
+  }
+  
+  #blok12 {
+    background-image: url('sygantury/mieszany.svg');
+    background-color: antiquewhite;
+    width: 6.5%;
+    height: 10%;
+    border: 2px solid rgba(50, 50, 50, 0.90);
+    box-shadow: 6px 6px 4px 0px rgba(50, 50, 50, 0.90);
+    margin-top: 7%;
+    margin-left: 33%;
+    position: absolute;
+    background-size: contain;
+    transition: color 0.1s;
+
+  }
+
+  #blok12:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    transform: translate(10px, 5px) ;
+  }
+
+  #blok13 {
+    background-image: url('sygantury/iglasty.svg');
+    background-color: antiquewhite;
+    width: 6.5%;
+    height: 10%;
+    border: 2px solid rgba(50, 50, 50, 0.90);
+    box-shadow: 6px 6px 4px 0px rgba(50, 50, 50, 0.90);
+    margin-top: 13%;
+    margin-left: 33%;
+    position: absolute;
+    background-size: contain;
+    transition: color 0.1s;
+
+  }
+
+  #blok13:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    transform: translate(10px, 5px) ;
+  }
+
+  #blok14 {
+    background-image: url('sygantury/mokradla.svg');
+    background-color: antiquewhite;
+    width: 6.5%;
+    height: 10%;
+    border: 2px solid rgba(50, 50, 50, 0.90);
+    box-shadow: 6px 6px 4px 0px rgba(50, 50, 50, 0.90);
+    margin-top: 19%;
+    margin-left: 33%;
+    position: absolute;
+    background-size: contain;
+    transition: color 0.1s;
+
+  }
+
+  #blok14:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    transform: translate(10px, 5px) ;
+  }
+
+  #blok15 {
+    background-image: url('sygantury/trawka.svg');
+    background-color: antiquewhite;
+    width: 6.5%;
+    height: 10%;
+    border: 2px solid rgba(50, 50, 50, 0.90);
+    box-shadow: 6px 6px 4px 0px rgba(50, 50, 50, 0.90);
+    margin-top: 25%;
+    margin-left: 33%;
+    position: absolute;
+    background-size: contain;
+    transition: color 0.1s;
+
+  }
+
+  #blok15:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    transform: translate(10px, 5px) ;
+  }
+
+  #blok16 {
+    background-image: url('sygantury/cmentarz.svg');
+    background-color: antiquewhite;
+    width: 6.5%;
+    height: 10%;
+    border: 2px solid rgba(50, 50, 50, 0.90);
+    box-shadow: 6px 6px 4px 0px rgba(50, 50, 50, 0.90);
+    margin-top: 1%;
+    margin-left: 47%;
+    position: absolute;
+    background-size: contain;
+    transition: color 0.1s;
+
+  }
+
+  #blok16:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    transform: translate(10px, 5px) ;
+  }
+  
+  #blok17 {
+    background-image: url('sygantury/nadlesnictwo.svg');
+    background-color: antiquewhite;
+    width: 6.5%;
+    height: 10%;
+    border: 2px solid rgba(50, 50, 50, 0.90);
+    box-shadow: 6px 6px 4px 0px rgba(50, 50, 50, 0.90);
+    margin-top: 7%;
+    margin-left: 47%;
+    position: absolute;
+    background-size: contain;
+    transition: color 0.1s;
+
+  }
+
+  #blok17:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    transform: translate(10px, 5px) ;
+  }
+  
+  #blok18 { 
+    background-color: #ecb465;;
+    width: 6.5%;
+    height: 10%;
+    border: 2px solid rgba(50, 50, 50, 0.90);
+    box-shadow: 6px 6px 4px 0px rgba(50, 50, 50, 0.90);
+    margin-top: 13%;
+    margin-left: 47%;
+    position: absolute;
+    background-size: contain;
+    transition: color 0.1s;
+
+  }
+
+  #blok18:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    transform: translate(10px, 5px) ;
+  }
+
+  #blok19 {
+    background-image: url('sygantury/zabytkowa_budowla.svg');
+    background-color: antiquewhite;
+    width: 6.5%;
+    height: 10%;
+    border: 2px solid rgba(50, 50, 50, 0.90);
+    box-shadow: 6px 6px 4px 0px rgba(50, 50, 50, 0.90);
+    margin-top: 19%;
+    margin-left: 47%;
+    position: absolute;
+    background-size: contain;
+    transition: color 0.1s;
+
+  }
+
+  #blok19:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    transform: translate(10px, 5px) ;
+  }
+
+  #blok20 {
+    background-image: url('sygantury/pomnik.svg');
+    background-color: antiquewhite;
+    width: 6.5%;
+    height: 10%;
+    border: 2px solid rgba(50, 50, 50, 0.90);
+    box-shadow: 6px 6px 4px 0px rgba(50, 50, 50, 0.90);
+    margin-top: 25%;
+    margin-left: 47%;
+    position: absolute;
+    background-size: contain;
+    transition: color 0.1s;
+
+  }
+
+  #blok20:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    transform: translate(10px, 5px) ;
+  }
+  
+  #blok21 {
+    background-color: #cc2828;
+    width: 6.5%;
+    height: 10%;
+    border: 2px solid rgba(50, 50, 50, 0.90);
+    box-shadow: 6px 6px 4px 0px rgba(50, 50, 50, 0.90);
+    margin-top: 1%;
+    margin-left: 60%;
+    position: absolute;
+    background-size: contain;
+    transition: color 0.1s;
+
+  }
+
+  #blok21:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    transform: translate(10px, 5px) ;
+  }
+
+  #blok22 {
+    background-color: #dde887;
+    width: 6.5%;
+    height: 10%;
+    border: 2px solid rgba(50, 50, 50, 0.90);
+    box-shadow: 6px 6px 4px 0px rgba(50, 50, 50, 0.90);
+    margin-top: 7%;
+    margin-left: 60%;
+    position: absolute;
+    background-size: contain;
+    transition: color 0.1s;
+
+  }
+
+  #blok22:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    transform: translate(10px, 5px) ;
+  }
+
+  #blok23 {
+    background-color: #56f953;
+    width: 6.5%;
+    height: 10%;
+    border: 2px solid rgba(50, 50, 50, 0.90);
+    box-shadow: 6px 6px 4px 0px rgba(50, 50, 50, 0.90);
+    margin-top: 13%;
+    margin-left: 60%;
+    position: absolute;
+    background-size: contain;
+    transition: color 0.1s;
+
+  }
+
+  #blok23:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    transform: translate(10px, 5px) ;
+  }
+
+  #blok24 {
+    background-color: #c09191;
+    width: 6.5%;
+    height: 10%;
+    border: 2px solid rgba(50, 50, 50, 0.90);
+    box-shadow: 6px 6px 4px 0px rgba(50, 50, 50, 0.90);
+    margin-top: 19%;
+    margin-left: 60%;
+    position: absolute;
+    background-size: contain;
+    transition: color 0.1s;
+
+  }
+
+  #blok24:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    transform: translate(10px, 5px) ;
+  }
+
+  #blok25 {
+    background-color: #22cce2;
+    width: 6.5%;
+    height: 10%;
+    border: 2px solid rgba(50, 50, 50, 0.90);
+    box-shadow: 6px 6px 4px 0px rgba(50, 50, 50, 0.90);
+    margin-top: 25%;
+    margin-left: 60%;
+    position: absolute;
+    background-size: contain;
+    transition: color 0.1s;
+
+  }
+
+  #blok25:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    transform: translate(10px, 5px) ;
+  }
+
+  #blok26 {
+    background-image: url('sygantury/Autostrada.jpg');
+    width: 6.5%;
+    height: 10%;
+    border: 2px solid rgba(50, 50, 50, 0.90);
+    box-shadow: 6px 6px 4px 0px rgba(50, 50, 50, 0.90);
+    margin-top: 1%;
+    margin-left: 73%;
+    position: absolute;
+    background-size: cover;
+    transition: color 0.1s;
+
+  }
+
+  #blok26:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    transform: translate(10px, 5px) ;
+  }
+
+  #blok27 {
+    background-image: url('sygantury/Droga_ekspresowa.jpg');
+    width: 6.5%;
+    height: 10%;
+    border: 2px solid rgba(50, 50, 50, 0.90);
+    box-shadow: 6px 6px 4px 0px rgba(50, 50, 50, 0.90);
+    margin-top: 7%;
+    margin-left: 73%;
+    position: absolute;
+    background-size: cover;
+    transition: color 0.1s;
+
+  }
+
+  #blok27:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    transform: translate(10px, 5px) ;
+  }
+
+  #blok28 {
+    background-image: url('sygantury/Droga_lokalna.jpg');
+    width: 6.5%;
+    height: 10%;
+    border: 2px solid rgba(50, 50, 50, 0.90);
+    box-shadow: 6px 6px 4px 0px rgba(50, 50, 50, 0.90);
+    margin-top: 13%;
+    margin-left: 73%;
+    position: absolute;
+    background-size: cover;
+    transition: color 0.1s;
+
+  }
+
+  #blok28:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    transform: translate(10px, 5px) ;
+  }
+
+  #blok29 {
+    background-image: url('sygantury/sciezki.jpg');
+    width: 6.5%;
+    height: 10%;
+    border: 2px solid rgba(50, 50, 50, 0.90);
+    box-shadow: 6px 6px 4px 0px rgba(50, 50, 50, 0.90);
+    margin-top: 19%;
+    margin-left: 73%;
+    position: absolute;
+    background-size: cover;
+    transition: color 0.1s;
+
+  }
+
+  #blok29:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    transform: translate(10px, 5px) ;
+  }
+
+  #blok30 {
+    background-image: url('sygantury/rzeki.jpg');
+    width: 6.5%;
+    height: 10%;
+    border: 2px solid rgba(50, 50, 50, 0.90);
+    box-shadow: 6px 6px 4px 0px rgba(50, 50, 50, 0.90);
+    margin-top: 25%;
+    margin-left: 73%;
+    position: absolute;
+    background-size: cover;
+    transition: color 0.1s;
+
+  }
+
+  #blok30:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    transform: translate(10px, 5px) ;
+  }
+
+  #blok31 {
+    background-color: #b3d11f;
+    width: 6.5%;
+    height: 10%;
+    border: 2px solid rgba(50, 50, 50, 0.90);
+    box-shadow: 6px 6px 4px 0px rgba(50, 50, 50, 0.90);
+    margin-top: 1%;
+    margin-left: 86%;
+    position: absolute;
+    background-size: cover;
+    transition: color 0.1s;
+
+  }
+
+  #blok31:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    transform: translate(10px, 5px) ;
+  }
+
+  #blok32 {
+    background-color: #dcec65;
+    width: 6.5%;
+    height: 10%;
+    border: 2px solid rgba(50, 50, 50, 0.90);
+    box-shadow: 6px 6px 4px 0px rgba(50, 50, 50, 0.90);
+    margin-top: 7%;
+    margin-left: 86%;
+    position: absolute;
+    background-size: cover;
+    transition: color 0.1s;
+
+  }
+
+  #blok32:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    transform: translate(10px, 5px) ;
+  }
+
+  #blok33 {
+    background-image: url('sygantury/głaz.svg');
+    background-color: antiquewhite;
+    width: 6.5%;
+    height: 10%;
+    border: 2px solid rgba(50, 50, 50, 0.90);
+    box-shadow: 6px 6px 4px 0px rgba(50, 50, 50, 0.90);
+    margin-top: 13%;
+    margin-left: 86%;
+    position: absolute;
+    background-size: cover;
+    transition: color 0.1s;
+
+  }
+
+  #blok33:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    transform: translate(10px, 5px) ;
+  }
+
+  #blok34 {
+    background-image: url('sygantury/pomnik_przyrody.svg');
+    background-color: antiquewhite;
+    width: 6.5%;
+    height: 10%;
+    border: 2px solid rgba(50, 50, 50, 0.90);
+    box-shadow: 6px 6px 4px 0px rgba(50, 50, 50, 0.90);
+    margin-top: 19%;
+    margin-left: 86%;
+    position: absolute;
+    background-size: cover;
+    transition: color 0.1s;
+
+  }
+
+  #blok34:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    transform: translate(10px, 5px) ;
+  }
+
+  #blok35 {
+    background-image: url('sygantury/sciezka_mala.jpg');
+    width: 6.5%;
+    height: 10%;
+    border: 2px solid rgba(50, 50, 50, 0.90);
+    box-shadow: 6px 6px 4px 0px rgba(50, 50, 50, 0.90);
+    margin-top: 25%;
+    margin-left: 86%;
+    position: absolute;
+    background-size: cover;
+    transition: color 0.1s;
+
+  }
+
+  #blok35:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    transform: translate(10px, 5px) ;
+  }
+
+  #blok36 {
+    background-image: url('sygantury/stare_drzewo.svg');
+    background-color: antiquewhite;
+    width: 6.5%;
+    height: 10%;
+    border: 2px solid rgba(50, 50, 50, 0.90);
+    box-shadow: 6px 6px 4px 0px rgba(50, 50, 50, 0.90);
+    margin-top: 31%;
+    margin-left: 5%;
+    position: absolute;
+    background-size: cover;
+    transition: color 0.1s;
+
+  }
+
+  #blok36:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    transform: translate(10px, 5px) ;
+  }
+
+  #blok37 {
+    background-image: url('sygantury/grob.svg');
+    background-color: antiquewhite;
+    width: 6.5%;
+    height: 10%;
+    border: 2px solid rgba(50, 50, 50, 0.90);
+    box-shadow: 6px 6px 4px 0px rgba(50, 50, 50, 0.90);
+    margin-top: 31%;
+    margin-left: 19%;
+    position: absolute;
+    background-size: cover;
+    transition: color 0.1s;
+
+  }
+
+  #blok37:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    transform: translate(10px, 5px) ;
+  }
+  
+  #result {
+    background-color: #dde887;
+    width: 30%;
+    height: 8.5%;
+    border: 2px solid rgba(50, 50, 50, 0.90);
+    box-shadow: 6px 6px 4px 0px rgba(50, 50, 50, 0.90);
+    margin-top: 2%;
+    margin-left: 32%;
+    text-align: center;
+    font-size: 25px;
+    color: #da7228;
+    text-shadow: 0px 0px 0 rgb(154,98,0),
+                 1px 0px  0 rgb(71,15,0),
+                 2px 0px 1px rgba(0,0,0,0.55),
+                 2px 0px 1px rgba(0,0,0,0.5),
+                 0px 0px 1px rgba(0,0,0,.2);
+    position: absolute;
+    background-size: cover;
+
+  }
+
+  
+
+  #exit_legenda {
+    background: rgb(74,164,71);
+    background: linear-gradient(147deg, rgba(74,164,71,1) 22%, rgba(28,83,46,1) 100%);
+    width: 20%;
+    height: 5%;
+    position: absolute;
+    margin-left: 7%;
+    margin-top: 4%;
+    font-size: 22.5px;
+    color: #d2691e;
+    text-shadow: 0px 0px 0 rgb(154,98,0),
+                 1px 0px  0 rgb(71,15,0),
+                 2px 0px 1px rgba(0,0,0,0.55),
+                 2px 0px 1px rgba(0,0,0,0.5),
+                 0px 0px 1px rgba(0,0,0,.2);
+    box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.90);
+    border-radius: 20px;
+    transition: color 0.1s;
+  }
+
+  #exit_legenda:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    transform: translate(10px, 5px) ;
+  }
+
+
+  #exit_to_map_legend {
+    background: rgb(74,164,71);
+    background: linear-gradient(147deg, rgba(74,164,71,1) 22%, rgba(28,83,46,1) 100%);
+    width: 20%;
+    height: 5%;
+    position: absolute;
+    margin-left: 68%;
+    margin-top: 4%;
+    font-size: 22.5px;
+    color: #d2691e;
+    text-shadow: 0px 0px 0 rgb(154,98,0),
+                 1px 0px  0 rgb(71,15,0),
+                 2px 0px 1px rgba(0,0,0,0.55),
+                 2px 0px 1px rgba(0,0,0,0.5),
+                 0px 0px 1px rgba(0,0,0,.2);
+    box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.90);
+    border-radius: 20px;
+    transition: color 0.1s;
+  }
+
+  #exit_to_map_legend:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    transform: translate(10px, 5px) ;
+  }
+
+  #text2_2 {
+    font-size: 35px;
+  }
+
+  #text2_1 {
+    font-size: 26px;
+  }
+
+  #text3_1 {
+    font-size: 25px;
+  }
+
+  #text_help_1 {
+    font-size: 25px;
+  }
+
+
+
+/*Responsywność */
+
+@media only screen and (max-width: 1000px) {
+
+  #second_bacground{
+    height: auto;
+    width: auto;
+  }
+
+  /*Respon. Strona tytułowa*/
+  #element_3 {
+    background-size: contain;
+    top: 34%;
+    height: 25%;
+    left: -30%;
+    width: 90%;
+  }
+
+  #element_2 {
+    background-size: contain;
+    top: 61%;
+    right: 67.5%;
+    height: 25%;
+    left: -60%;
+    width: 90%;
+  }
+
+  #element_1 {
+    top: 7%;
+    height: 25%;
+    width: 90%;
+  }
+
+  #text3, #text2  {
+    height: 24%;
+  }
+
+  #text_help_1 {
+    font-size: 22px;
+  }
+
+  #help_background {
+    top: 3%;
+    height: 5%;
+    width: 50%;
+  }
+
+  /*Respon. Autor*/
+
+  #exit_author{
+    position: absolute;
+    width: 30%;
+    top: 8%;
+    right: 65%;
+  }
+  
+  #my_text_2{
+    background-color: rgb(160, 199, 156);
+    display: none;
+  }
+
+  #my_text2{
+    font-size: 120%;
+    text-align: justify;
+    width: 85%;
+    left: -33%;
+    height: 50%;
+    top: 20%;
+  }
+
+  #Gotów{
+    width: 20%;
+    height: 10%;
+  }
+
+  /*Respon. Dlaczego Puszcza */
+
+  #exit_puszcza{
+    width: 30%;
+    top: 9%;
+  }
+
+  #block_in_puszcza{
+    top: 13%;
+  }
+
+  /*Respon. Legenda */
+
+  #blok_pod_mapami_legend{
+    height: 75%;
+    width: 50%;
+    top: 15%;
+    overflow-y: scroll;
+  }
+
+  /* width */
+  #blok_pod_mapami_legend::-webkit-scrollbar {
+  width: 17px;
+  background-color: #c9c9c9;
+  }
+
+  /* Track */
+  #blok_pod_mapami_legend::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  } 
+
+  /* Handle */
+  #blok_pod_mapami_legend::-webkit-scrollbar-thumb {
+  background: #ce8a30;
+  }
+
+  #blok1 {
+    background-size: cover;
+    height: 10%;
+    width: 20%;
+    margin-left: 5%;
+    margin-top: 8%;
+  }
+
+  #blok6 {
+    background-size: cover;
+    height: 10%;
+    width: 20%;
+    margin-left: 32%;
+    margin-top: 8%;
+  }
+
+  #blok11 {
+    background-size: cover;
+    height: 10%;
+    width: 20%;
+    margin-left: 62%;
+    margin-top: 8%;
+  }
+
+  #blok16{
+    background-size: cover;
+    height: 10%;
+    width: 20%;
+    margin-top: 22%;
+    margin-left: 5%;
+    margin-top: 35%;
+  }
+
+  #blok21{
+    background-size: cover;
+    height: 10%;
+    width: 20%;
+    margin-top: 22%;
+    margin-left: 32%;
+    margin-top: 35%;
+  }
+
+  #blok26{
+    background-size: cover;
+    height: 10%;
+    width: 20%;
+    margin-top: 22%;
+    margin-left: 62%;
+    margin-top: 35%;
+  }
+
+  #blok31{
+    background-size: cover;
+    height: 10%;
+    width: 20%;
+    margin-top: 42%;
+    margin-left: 5%;
+    margin-top: 60%;
+  }
+
+  #blok2{
+    background-size: cover;
+    height: 10%;
+    width: 20%;
+    margin-top: 42%;
+    margin-left: 32%;
+    margin-top: 60%;
+  }
+
+  #blok7{
+    background-size: cover;
+    height: 10%;
+    width: 20%;
+    margin-top: 42%;
+    margin-left: 62%;
+    margin-top: 60%;
+  }
+
+  #blok12{
+    background-size: cover;
+    height: 10%;
+    width: 20%;
+    margin-top: 62%;
+    margin-left: 5%;
+    margin-top: 85%;
+  }
+
+  #blok17{
+    background-size: cover;
+    height: 10%;
+    width: 20%;
+    margin-top: 62%;
+    margin-left: 32%;
+    margin-top: 85%;
+  }
+
+  #blok22{
+    background-size: cover;
+    height: 10%;
+    width: 20%;
+    margin-top: 62%;
+    margin-left: 62%;
+    margin-top: 85%;
+  }
+
+  #blok27{
+    background-size: cover;
+    height: 10%;
+    width: 20%;
+    margin-top: 82%;
+    margin-left: 5%;
+    margin-top: 110%;
+  }
+
+  #blok3{
+    background-size: cover;
+    height: 10%;
+    width: 20%;
+    margin-top: 82%;
+    margin-left: 32%;
+    margin-top: 110%
+  }
+
+  #blok8{
+    background-size: cover;
+    height: 10%;
+    width: 20%;
+    margin-top: 82%;
+    margin-left: 62%;
+    margin-top: 110%
+  }
+
+  #blok13{
+    background-size: cover;
+    height: 10%;
+    width: 20%;
+    margin-top: 102%;
+    margin-left: 5%;
+    margin-top: 135%;
+  }
+
+  #blok18{
+    background-size: cover;
+    height: 10%;
+    width: 20%;
+    margin-top: 102%;
+    margin-left: 32%;
+    margin-top: 135%;
+  }
+
+  #blok23{
+    background-size: cover;
+    height: 10%;
+    width: 20%;
+    margin-top: 102%;
+    margin-left: 62%;
+    margin-top: 135%;
+  }
+
+  #blok9{
+    background-size: cover;
+    height: 10%;
+    width: 20%;
+    margin-top: 122%;
+    margin-left: 5%;
+    margin-top: 160%;
+  }
+
+  #blok14{
+    background-size: cover;
+    height: 10%;
+    width: 20%;
+    margin-top: 122%;
+    margin-left: 32%;
+    margin-top: 160%;
+  }
+
+  #blok19{
+    background-size: cover;
+    height: 10%;
+    width: 20%;
+    margin-top: 122%;
+    margin-left: 62%;
+    margin-top: 160%;
+  }
+
+  #blok24{
+    background-size: cover;
+    height: 10%;
+    width: 20%;
+    margin-top: 142%;
+    margin-left: 5%;
+    margin-top: 185%;
+  }
+
+  #blok29{
+    background-size: cover;
+    height: 10%;
+    width: 20%;
+    margin-top: 142%;
+    margin-left: 32%;
+    margin-top: 185%;
+  }
+
+  #blok34{
+    background-size: cover;
+    height: 10%;
+    width: 20%;
+    margin-top: 142%;
+    margin-left: 62%;
+    margin-top: 185%;
+  }
+
+  #blok5{
+    background-size: cover;
+    height: 10%;
+    width: 20%;
+    margin-top: 162%;
+    margin-left: 5%;
+    margin-top: 210%;
+  }
+
+  #blok10{
+    background-size: cover;
+    height: 10%;
+    width: 20%;
+    margin-top: 162%;
+    margin-left: 32%;
+    margin-top: 210%;
+  }
+
+  #blok15{
+    background-size: cover;
+    height: 10%;
+    width: 20%;
+    margin-top: 162%;
+    margin-left: 62%;
+    margin-top: 210%;
+  }
+
+  #blok20{
+    background-size: cover;
+    height: 10%;
+    width: 20%;
+    margin-top: 182%;
+    margin-left: 5%;
+    margin-top: 235%;
+  }
+
+  #blok25{
+    background-size: cover;
+    height: 10%;
+    width: 20%;
+    margin-top: 182%;
+    margin-left: 32%;
+    margin-top: 235%;
+  }
+
+  #blok30{
+    background-size: cover;
+    height: 10%;
+    width: 20%;
+    margin-top: 182%;
+    margin-left: 62%;
+    margin-top: 235%;
+  }
+
+  #blok35{
+    background-size: cover;
+    height: 10%;
+    width: 20%;
+    margin-top: 202%;
+    margin-left: 5%;
+    margin-top: 260%;
+  }
+
+  #blok4{
+    background-size: cover;
+    height: 10%;
+    width: 20%;
+    margin-top: 202%;
+    margin-left: 32%;
+    margin-top: 260%;
+  }
+
+  #blok32{
+    background-size: cover;
+    height: 10%;
+    width: 20%;
+    margin-top: 202%;
+    margin-left: 62%;
+    margin-top: 260%;
+  }
+
+  #blok33{
+    background-size: cover;
+    height: 10%;
+    width: 20%;
+    margin-top: 222%;
+    margin-left: 5%;
+    margin-top: 285%;
+  }
+
+  #blok36{
+    background-size: cover;
+    height: 10%;
+    width: 20%;
+    margin-top: 222%;
+    margin-left: 32%;
+    margin-top: 285%;
+  }
+
+  #blok37{
+    background-size: cover;
+    height: 10%;
+    width: 20%;
+    margin-top: 222%;
+    margin-left: 62%;
+    margin-top: 285%;
+  }
+
+  #blok28{
+    background-size: cover;
+    height: 10%;
+    width: 20%;
+    margin-top: 242%;
+    margin-left: 5%;
+    margin-top: 310%;
+  }
+
+  #exit_legenda{
+    width: 38%;
+  }
+
+  #exit_to_map_legend{
+    margin-left: 55%;
+    width: 38%;
+  }
+
+  #result{
+    width: 38%;
+    height: 20%;
+    text-align: center;
+    padding-top: 8%;
+    top: 30%;
+    margin-left: 58%;
+  }
+
+  /*Respon. Mapy */
+  #blok_pod_mapami{
+    width: 90%;
+    overflow-y: scroll;
+    margin-top: 13%;
+  }
+
+  #blok_pod_blokiem_mapami{
+    width: 100%;
+    height: 70%;
+  }
+
+  #to_map1{
+    width: 95%;
+    margin-top: 12%;
+  }
+
+  #to_map2{
+    width: 95%;
+    margin-top: 26%;
+  }
+
+  #to_map3{
+    width: 95%;
+    margin-top: 40%;
+  }
+
+  #to_map4{
+    width: 95%;
+    margin-top: 53%;
+  }
+
+  /* width */
+  #blok_pod_mapami::-webkit-scrollbar {
+    width: 17px;
+    background-color: #c9c9c9;
+    }
+  
+    /* Track */
+    #blok_pod_mapami::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    } 
+  
+    /* Handle */
+    #blok_pod_mapami::-webkit-scrollbar-thumb {
+    background: #ce8a30;
+    }
+
+  #map_one_in_mapy{
+    top: 70%;
+    width: 80%;
+    height: 20%;
+    right: 10%;
+  }
+
+  #map_two_in_mapy{
+    top: 80%;
+    width: 80%;
+    height: 20%;
+    right: 10%;
+  }
+
+  #map_three_in_mapy{
+    top: 105%;
+    width: 80%;
+    height: 20%;
+    right: 10%;
+  }
+
+  #map_four_in_mapy{
+    top: 147%;
+    width: 80%;
+    height: 20%;
+    right: 10%;
+  }
+
+  #exit_map{
+    width: 30%;
+    margin-left: 3%;
+  }
+
+  #legenda_przejscie{
+    width: 30%;
+    margin-left: 36%;
+  }
+
+  #dlaczego_puszcza{
+    width: 31%;
+    margin-left: 68%;
+  }
+
+} 
+  

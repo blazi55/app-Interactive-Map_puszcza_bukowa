@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./style_0.css" type="text/css"/>
+    <link rel="stylesheet" href="./lightbox.min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" />
+	<script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"></script>
+    <script src="sygantury/leaflet-polygon.fillPattern.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./lightbox-plus-jquery.min.js"></script>
+    <meta http-equiv="Site-Exit " content="revealTrans(Duration=2, Transition=20)">
+
+    <script src="geojsony/budynki.js"></script>
+    <script src="geojsony/drogi.js"></script>
+    <script src="geojsony/kompleksy.js"></script>
+    <script src="geojsony/lasy.js"></script>
+    <script src="geojsony/mokradla.js"></script>
+    <script src="geojsony/puszcza_bukowa.js"></script>
+    <script src="geojsony/przydomowe_budynki.js"></script>
+    <script src="geojsony/rzeki_strumienie.js"></script>
+    <script src="geojsony/sady_dzialki.js"></script>
+    <script src="geojsony/tereny_rolne_trawiaste.js"></script>
+    <script src="geojsony/tereny_wodne.js"></script>
+
+    <script src="geojsony/wieza_kolowo.js"></script>
+    <script src="geojsony/strzelnica.js"></script>
+    <script src="geojsony/kosciol.js"></script>
+    <script src="geojsony/cmentarze.js"></script>
+    <script src="geojsony/golf.js"></script>
+    <script src="geojsony/ogrod_dendrologiczny.js"></script>
+    <script src="geojsony/stadnina.js"></script>
+    <script src="geojsony/widoki.js"></script>
+    <script src="geojsony/ognisko.js"></script>
+    <script src="geojsony/plaza.js"></script>
+    <script src="geojsony/nadleśnictwo.js"></script>
+    <script src="geojsony//głazy.js"></script>
+    <script src="geojsony/drzewa.js"></script>
+
+    <title>Document</title>
+    
+</head>
+<body>
+    
+    <div id="first_map">
+       <script> 
+            let map = L.map('first_map', {
+                minZoom: 12,
+                maxZoom: 17,
+
+            }).setView([53.327030, 14.679795], 13);
+
+            let granice1 = L.geoJson(puszcza_bukowa, {style: style_granica}).addTo(map);
+
+            function style_granica(feature) {
+                    return {
+                        weight: 3,
+                        opacity: 1,
+                        color: 'black',
+                        fillColor: 'lightgreen',
+                        fillOpacity: 0.5,
+                    };
+            }
+
+            let lasy1 = L.geoJson(las, {style: style_lasy}).addTo(map);
+
+            function style_lasy(feature) {
+                if ("iglasty" == feature.properties.KATEGORIA) {
+                    return {
+                        weight: 0.2,
+                        opacity: 1,
+                        color: 'black',
+                        fill: 'url(sygantury/iglasty.svg)',
+                        fillOpacity: 1,
+                    };
+                }
+                
+                else if ("lisciasty" == feature.properties.KATEGORIA) {
+                    return {
+                        weight: 0.2,
+                        opacity: 1,
+                        color: 'black',
+                        fill: 'url(sygantury/lisciasty.svg)',
+                        fillOpacity: 1,
+                    };
+                } else {
+                    return {
+                        weight: 0.2,
+                        opacity: 1,
+                        color: 'black',
+                        fill: 'url(sygantury/mieszany.svg)',
+                        fillOpacity: 1,
+                    };
+                }
+            }
+
+            let sady_dzialki1 = L.geoJson(sady_dzialki, {style: style_sady_dzialki}).addTo(map);
+
+            function style_sady_dzialki(feature) {
+                if ("PTUT01" == feature.properties.X_KOD || "PTUT02" == feature.properties.X_KOD ) {
+                    return {
+                        weight: 0.2,
+                        opacity: 1,
+                        color: 'black',
+                        fillColor: '#dcec65',
+                        fillOpacity: 1,
+                    };
+                }
+                else if ("PTUT03" == feature.properties.X_KOD) {
+                    return {
+                        weight: 0.2,
+                        opacity: 1,
+                        color: 'black',
+                        fillColor: '#ecb465',
+                        fillOpacity: 1,
+                    };
+                } else {
+                    return {
+                        weight: 0.2,
+                        opacity: 1,
+                        color: 'black',
+                        fillColor: '#b3d11f',
+                        fillOpacity: 1,
+                    };
+                }
+            }
+
+            let tereny_rolne_trawiaste1 = L.geoJson(tereny_rolne_trawiaste, {style: style_tereny_rolne_trawiaste}).addTo(map);
+
+            function style_tereny_rolne_trawiaste(feature) {
+                if ("PTTR01" == feature.properties.X_KOD ) {
+                    return {
+                        weight: 0.2,
+                        opacity: 1,
+                        color: 'black',
+                        fill: 'url(sygantury/trawka.svg)',
+                        fillOpacity: 1,
+                    };
+                } else {
+                    return {
+                        weight: 0.2,
+                        opacity: 1,
+                        color: 'black',
+                        fillColor: '#dde887',
+                        fillOpacity: 1,
+                    };
+                }
+            }
+            
+            let kompleksy1 = L.geoJson(kompleksy, {style: style_kompleksy}).addTo(map);
+
+            function style_kompleksy(feature) {
+                if ("KUHO04" == feature.properties.X_KOD) {
+                    //biwak/schronisko turystyczne
+                    return {
+                        weight: 0.2,
+                        opacity: 1,
+                        color: 'black',
+                        fillColor: 'orange',
+                        iconSize: [33,33],
+                        fillOpacity: 0.2,
+                    };
+
+                } else if ("KUMN02" == feature.properties.X_KOD ) {
+                    return {
+                        weight: 0.2,
+                        opacity: 1,
+                        color: 'black',
+                        fillColor: '#c09191',
+                        fillOpacity: 0.2,
+                    };
+                }
+                else if ("KUSK05" == feature.properties.X_KOD) {
+                    //domki letniskowe
+                    return {
+                        weight: 0.2,
+                        opacity: 1,
+                        color: 'black',
+                        fillColor: '#c09191',
+                        fillOpacity: 0.2,
+                    };
+                }
+                else if ("KUSK01" == feature.properties.X_KOD) {
+                    //ogrod dendrologiczny
+                    return {
+                        weight: 0.2,
+                        opacity: 1,
+                        color: 'black',
+                        fillColor: 'lightgreen',
+                        fillOpacity: 1,
+                    };
+                }
+                else if ("OT_KUSK_A.113" == feature.properties.GMLID) {
+                    //golf
+                    return {
+                        weight: 0.2,
+                        opacity: 1,
+                        color: 'black',
+                        fillColor: '#78ff75',
+                        fillOpacity: 1,
+                    };
+                }
+                else if ("KUSC01" == feature.properties.X_KOD) {
+                    //cmentarz
+                    return {
+                        weight: 0.2,
+                        opacity: 1,
+                        color: 'black',
+                        fill: 'url(sygantury/cmentarz.svg)',
+                        fillOpacity: 1,
+                    };
+                }
+                else if ("KUKO10" == feature.properties.X_KOD ) {
+                    //zajezdnia
+                    return {
+                        weight: 0.2,
+                        opacity: 1,
+                        color: 'black',
+                        fillColor: '#c09191',
+                        fillOpacity: 1,
+                    };
+                }
+                else if ("KUKO04" == feature.properties.X_KOD) {
+                    //parking
+                    return {
+                        weight: 0.2,
+                        opacity: 1,
+                        color: 'black',
+                        fillColor: '#c09191',
+                        fillOpacity: 1,
+                    };
+                }
+                else if ("KUSC02" == feature.properties.X_KOD) {
+                    //kosciol
+                    return {
+                        weight: 0.2,
+                        opacity: 1,
+                        color: 'black',
+                        fillColor: 'white',
+                        fillOpacity: 1,
+                    };
+                }
+                else {
+                    return {
+                        weight: 0.2,
+                        opacity: 1,
+                        color: 'black',
+                        fillColor: '#c09191',
+                        fillOpacity: 0.2,
+                    };
+                }
+            }
+                
+            let przydomowe_budynki1 = L.geoJson(przydomowe_budynki, {style: style_przydomkowe_budynki}).addTo(map);
+
+            function style_przydomkowe_budynki(feature) {
+                if ("PL.PZGiK.339.3206__OT_PTZB_A" == feature.properties.layer || "PL.PZGiK.339.3262__OT_PTZB_A" == feature.properties.layer) {
+                    return {
+                        weight: 0.2,
+                        opacity: 0,
+                        color: 'black',
+                        fillColor: '#c09191',
+                        fillOpacity: 0.5,
+                    };
+                }
+            }
+
+            let budynki1 = L.geoJson(budynek, {style: style_budynki}).addTo(map);
+
+            function style_budynki(feature) {
+                if ("PL.PZGiK.339.3206__OT_BUBD_A" == feature.properties.layer || "PL.PZGiK.339.3262__OT_BUBD_A" == feature.properties.layer) {
+                    return {
+                        weight: 0.3,
+                        opacity: 1,
+                        color: 'black',
+                        fillColor: '#cc2828',
+                        fillOpacity: 1,
+                    };
+                }
+                else if("PL.PZGiK.339.3206__OT_BUSP_A" == feature.properties.layer ) { 
+                    return {
+                        weight: 0.3,
+                        opacity: 1,
+                        color: 'black',
+                        fillColor: '#cc2828',
+                        fillOpacity: 1,
+                    };
+                }
+            }
+
+            let rzeki1 = L.geoJson(rzeki_strumienie, {style: style_rzeki_strumienie}).addTo(map);
+
+            function style_rzeki_strumienie(feature) {
+                if ("SWRS01" == feature.properties.X_KOD || "SWRS02" == feature.properties.layer) {
+                    return {
+                        weight: 1,
+                        opacity: 1,
+                        color: '#1f84d1',
+                        fillColor: '#1f84d1',
+                        fillOpacity: 1,
+                    };
+                }
+            }
+
+            let tereny_wodne1 = L.geoJson(tereny_wodne, {style: style_tereny_wodne}).addTo(map);
+
+            function style_tereny_wodne(feature) {
+                if ("PL.PZGiK.339.3206__OT_PTWP_A" == feature.properties.layer || "PL.PZGiK.339.3262__OT_PTWP_A" == feature.properties.layer) {
+                    return {
+                        weight: 0.2,
+                        opacity: 1,
+                        color: 'black',
+                        fillColor: '#22cce2',
+                        fillOpacity: 1,
+                    };
+                }
+            }
+
+            let mokradla1 = L.geoJson(mokradla, {style: style_mokradla}).addTo(map);
+
+            function style_mokradla(feature) {
+                if ("OIMK02" == feature.properties.X_KOD) {
+                    return {
+                        weight: 0.2,
+                        opacity: 1,
+                        color: 'black',
+                        fill: 'url(sygantury/mokradla.svg)',
+                        fillOpacity: 1,
+                    };
+                }
+            }
+
+            var drogi1 = L.geoJson(drogi, {style: style_drogi}).addTo(map);
+
+            function style_drogi(feature) {
+                if ("SKDR01" == feature.properties.X_KOD  ) {
+                    return {
+                        weight: 4.5,
+                        opacity: 1,
+                        color: 'yellow',
+                        fillColor: 'black',
+                        fillOpacity: 1,
+                    };
+                } 
+                else if ("SKDR02" == feature.properties.X_KOD  ||
+                "SKDR03" == feature.properties.X_KOD
+                ) {
+                    return {
+                        weight: 3.5,
+                        opacity: 1,
+                        color: '#ff0000',
+                        fillColor: 'black',
+                        fillOpacity: 1,
+                    };
+                } 
+                else if ("SKDR04" == feature.properties.X_KOD  ||
+                "SKDR05" == feature.properties.X_KOD ||
+                "SKDR06" == feature.properties.X_KOD
+                ) {
+                    return {
+                        weight: 2,
+                        opacity: 1,
+                        color: 'black',
+                        fillColor: 'black',
+                        fillOpacity: 1,
+                    };
+                }  else if ("SKDR07" == feature.properties.X_KOD){
+                    return {
+                        weight: 2.5,
+                        opacity: 1,
+                        color: '#8a6060',
+                        fillColor: 'black',
+                        fillOpacity: 1,
+                    };
+                }
+                else if ("SKRP01" == feature.properties.X_KOD ||
+                    "SKRP02" == feature.properties.X_KOD ||
+                    "SKRP03" == feature.properties.X_KOD 
+                ){
+                    return {
+                        weight: 1,
+                        opacity: 1,
+                        color: 'orange',
+                        fillColor: 'black',
+                        fillOpacity: 1,
+                    };
+                    
+                } else {
+                    return {
+                        weight: 2,
+                        opacity: 1,
+                        color: '#787878',
+                        fillColor: 'black',
+                        fillOpacity: 1,
+                    };
+                }
+            }
+  
+           let icon_wieza_kolowo = L.icon({
+                    iconUrl: 'sygantury/wieza_kolowo.svg',
+                    iconSize: [33, 33],  
+                });
+
+           /* let wieza_kolowo1 = {
+                pointToLayer: icon_wieza_kolowo,
+                onEachFeature: onEachFeature
+                }
+                L.geoJSON(wieza_kolowo, wieza_kolowo1).addTo(map); */
+
+            let wieza_kolowo1 = L.geoJson(wieza_kolowo, {
+										pointToLayer:
+										function(feature, latlng) {
+												return L.marker(latlng,
+													{
+													icon: icon_wieza_kolowo
+													}
+												)
+											
+										} , onEachFeature: onEachFeature }).addTo(map);
+
+           let  icon_strzelnica = L.icon({
+                    iconUrl: 'sygantury/strzelnica.svg',
+                    iconSize: [40, 40],  
+                });
+
+          /*  let strzelnica1 = {
+                pointToLayer: icon_strzelnica
+                }
+                L.geoJSON(strzelnica, strzelnica1).addTo(map).bindPopup("Strzelnica"); */
+            
+            let strzelnica1 = L.geoJson(strzelnica, {
+										pointToLayer:
+										function(feature, latlng) {
+												return L.marker(latlng,
+													{
+													icon: icon_strzelnica
+													}
+												)
+											
+										} , onEachFeature: onEachFeature }).addTo(map);
+
+            let icon_widoki = L.icon({
+                    iconUrl: 'sygantury/widok.svg',
+                    iconSize: [40, 40],  
+                });
+
+            /* let widoki1 = {
+                pointToLayer: icon_widoki
+                }
+                L.geoJSON(widoki, widoki1).addTo(map).bindPopup("Ale piękny widok!"); */
+
+            let widoki1 = L.geoJson(widoki, {
+										pointToLayer:
+										function(feature, latlng) {
+												return L.marker(latlng,
+													{
+													icon: icon_widoki
+													}
+												)
+											
+										} , onEachFeature: onEachFeature }).addTo(map);
+
+            let icon_ognisko = L.icon( {
+                    iconUrl: 'sygantury/ognisko.svg',
+                    iconSize: [40, 40],  
+                });
+
+           /* let ognisko1 = {
+                pointToLayer: icon_ognisko,
+                }
+                L.geoJSON(ognisko, ognisko1).addTo(map).bindPopup("Miejsce na ognisko lub piknik"); */
+
+            let ognisko1 = L.geoJson(ognisko, {
+										pointToLayer:
+										function(feature, latlng) {
+												return L.marker(latlng,
+													{
+													icon: icon_ognisko
+													}
+												)
+											
+										} , onEachFeature: onEachFeature }).addTo(map);
+
+            let icon_nadlesnictwo = L.icon({
+                iconUrl: 'sygantury/nadlesnictwo.svg', 
+                iconSize: [33, 33],
+                });
+
+            let nadlesnictwo1 = L.geoJson(nadlesnictwo, {
+										pointToLayer:
+										function(feature, latlng) {
+												return L.marker(latlng,
+													{
+													icon: icon_nadlesnictwo
+													}
+												)
+											
+										} , onEachFeature: onEachFeature }).addTo(map); /*function onEachFeature(feature, layer) {
+							if(feature.properties.name ) {
+								layer.bindPopup(feature.properties.name );
+									}}
+										}
+									).addTo(map); */
+
+            let icon_pomnik_przyrody = L.icon({
+                iconUrl: 'sygantury/pomnik_przyrody.svg', 
+                iconSize: [33, 33],
+                }); 
+
+            let pomnik_przyrody1 = L.geoJson(pomnik_przyrody, {
+										pointToLayer:
+										function(feature, latlng) {
+												return L.marker(latlng,
+													{
+													icon: icon_pomnik_przyrody
+													}
+												)
+											
+										} , onEachFeature: onEachFeature }).addTo(map);
+
+            let icon_stadnina  = L.icon({
+                    iconUrl: 'sygantury/podkowa.svg',
+                    iconSize: [40, 40],  
+                });
+                
+            /*let stadnina1 = {
+                pointToLayer: icon_stadnina
+                }
+                L.geoJSON(stadnina, stadnina1).addTo(map).bindPopup("Stadnina"); */
+            
+            let stadnina1 = L.geoJson(stadnina, {
+										pointToLayer:
+										function(feature, latlng) {
+												return L.marker(latlng,
+													{
+													icon: icon_stadnina
+													}
+												)
+											
+										} , onEachFeature: onEachFeature }).addTo(map);
+
+            let icon_golf  = L.icon({
+                    iconUrl: 'sygantury/golf_point.svg',
+                    iconSize: [40, 40],  
+                });
+
+            /*let golf1 = {
+                pointToLayer: icon_golf
+                }
+                L.geoJSON(golf, golf1).addTo(map).bindPopup("Pole Golfowe"); */
+            
+            let golf1 = L.geoJson(golf, {
+										pointToLayer:
+										function(feature, latlng) {
+												return L.marker(latlng,
+													{
+													icon: icon_golf
+													}
+												)
+											
+										} , onEachFeature: onEachFeature }).addTo(map);
+
+            let icon_plaza = L.icon({
+                    iconUrl: 'sygantury/plaza.svg',
+                    iconSize: [40, 40],  
+                });
+
+           /* let plaza1 = {
+                pointToLayer: icon_plaza
+                }
+                L.geoJSON(plaza, plaza1).addTo(map).bindPopup("Plaża"); */
+            
+            let plaza1 = L.geoJson(plaza, {
+										pointToLayer:
+										function(feature, latlng) {
+												return L.marker(latlng,
+													{
+													icon: icon_plaza
+													}
+												)
+											
+										} , onEachFeature: onEachFeature }).addTo(map);
+
+            let icon_glaz = L.icon({
+                iconUrl: 'sygantury/głaz.svg', 
+                iconSize: [33, 33],
+                });
+
+            let glaz1 = L.geoJson(glaz, {
+										pointToLayer:
+										function(feature, latlng) {
+												return L.marker(latlng,
+													{
+													icon: icon_glaz
+													}
+												)
+											
+										} , onEachFeature: onEachFeature }).addTo(map);
+
+            let icon_ogrod_dendrologiczny = L.icon({
+                    iconUrl: 'sygantury/ogrod_dendrologiczny.svg',
+                    iconSize: [40, 40],  
+                });
+
+           /* let ogrod_dendrologiczny1 = {
+                pointToLayer: icon_ogrod_dendrologiczny
+                }
+                L.geoJSON(ogrod_dendrologiczny, ogrod_dendrologiczny1).addTo(map).bindPopup("Ogród Dendrologiczny");
+            */
+
+            let ogrod_dendrologiczny1 = L.geoJson(ogrod_dendrologiczny, {
+										pointToLayer:
+										function(feature, latlng) {
+												return L.marker(latlng,
+													{
+													icon: icon_ogrod_dendrologiczny
+													}
+												)
+											
+										} , onEachFeature: onEachFeature }).addTo(map);
+
+            let icon_kosciol = L.icon({
+                iconUrl: 'sygantury/kosciol.svg', 
+                iconSize: [30, 30],
+                }); 
+
+            let kosciol1 = L.geoJson(kosciol, {
+										pointToLayer:
+										function(feature, latlng) {
+												return L.marker(latlng,
+													{
+													icon: icon_kosciol
+													}
+												)
+											
+										} , onEachFeature: onEachFeature }).addTo(map);   
+
+            let icon_cmentarz = L.icon({
+                iconUrl: 'sygantury/cmentarz_wojenny.svg', 
+                iconSize: [35, 35],
+                });
+
+            let cmentarz1 = L.geoJson(cmentarze, {
+										pointToLayer:
+										function(feature, latlng) {
+												return L.marker(latlng,
+													{
+													icon: icon_cmentarz
+													}
+												)
+											
+										} , onEachFeature: onEachFeature }).addTo(map);                      
+
+            function onEachFeature(feature, layer) {
+                layer.on({
+                    click: clickFeature,
+                    doubleClick: resetHighlight,
+                    //click: zoomToFeature
+                })};
+
+            let clickedMarker;
+                    function clickFeature(e) {
+                            if(clickedMarker) {
+                                if(icon_nadlesnictwo.name == "Nadleśnictwo Binowo") {
+                                    clickedMarker.setIcon(icon_nadlesnictwo);
+                                }
+                               else if (icon_wieza_kolowo.name == "Wieża kołowo nr.1") {
+                                    clickedMarker.setIcon(icon_wieza_kolowo);
+                                }
+                                else if (icon_cmentarz.name == "cmentarze") {
+                                    clickedMarker.setIcon(icon_cmentarz);
+                                } 
+                                else if (icon_kosciol.name == "kosciol") {
+                                    clickedMarker.setIcon(icon_kosciol);
+                                } 
+                                else if (icon_ogrod_dendrologiczny.name == "ogrod_dendrologiczny") {
+                                    clickedMarker.setIcon(icon_ogrod_dendrologiczny);
+                                } 
+                                else if (icon_glaz.name == "Głaz Serce Puszczy") {
+                                    clickedMarker.setIcon(icon_glaz);
+                                }
+                                else if (icon_plaza.name == "plaza") {
+                                    clickedMarker.setIcon(icon_plaza);
+                                }
+                                else if (icon_golf.name == "golf") {
+                                    clickedMarker.setIcon(icon_golf);
+                                }
+                                else if (icon_pomnik_przyrody.name == "Aleja Tuj") {
+                                    clickedMarker.setIcon(icon_pomnik_przyrody);
+                                }
+                                else if (icon_ognisko.name == "ognisko") {
+                                    clickedMarker.setIcon(icon_ognisko); 
+                                }
+                                else if (icon_strzelnica.name == "strzelnica") {
+                                    clickedMarker.setIcon(icon_strzelnica);
+                                }
+                                else if (icon_widoki.name == "widoki") {
+                                    clickedMarker.setIcon(icon_widoki); /* to zrobic */
+                                }
+                                else if (icon_stadnina.name == "stadnina") {
+                                    clickedMarker.setIcon(icon_stadnina); 
+                                }   
+                            }
+
+            let layer = e.target;
+                            if (icon_nadlesnictwo.name == "Nadleśnictwo Binowo") {
+                                e.target.setIcon(icon_nadlesnictwo);
+                            clickedMarker = e.target;
+                            } else if (icon_wieza_kolowo.name == "Wieża kołowo nr.1") {
+                                e.target.setIcon(icon_wieza_kolowo);
+                            clickedMarker = e.target;
+                            } 
+                            else if (icon_cmentarz.name == "cmentarze") {
+                                e.target.setIcon(icon_cmentarz);
+                            clickedMarker = e.target;
+                            } 
+                            else if (icon_kosciol.name == "kosciol") {
+                                e.target.setIcon(icon_kosciol);
+                            clickedMarker = e.target;                                
+                            } 
+                                else if (icon_ogrod_dendrologiczny.name == "ogrod_dendrologiczny") {
+                                    e.target.setIcon(icon_ogrod_dendrologiczny);
+                            clickedMarker = e.target;                                
+                            } 
+                                else if (icon_glaz.name == "Głaz Serce Puszczy") {
+                                    e.target.setIcon(icon_glaz);
+                            clickedMarker = e.target;                                
+                            }
+                                else if (icon_plaza.name == "plaza") {
+                                    e.target.setIcon(icon_plaza);
+                            clickedMarker = e.target;                                
+                            }
+                                else if (icon_golf.name == "golf") {
+                                    e.target.setIcon(icon_golf);
+                            clickedMarker = e.target;                                
+                            }
+                                else if (icon_pomnik_przyrody.name == "Aleja Tuj") {
+                                    e.target.setIcon(icon_pomnik_przyrody);
+                            clickedMarker = e.target;                                
+                            }
+                                else if (icon_ognisko.name == "ognisko") {
+                                    e.target.setIcon(icon_ognisko);
+                            clickedMarker = e.target;                                
+                            }
+                                else if (icon_strzelnica.name == "strzelnica") {
+                                    e.target.setIcon(icon_strzelnica);
+                            clickedMarker = e.target;                                
+                            }
+                                else if (icon_widoki.name == "widoki") {
+                                    e.target.setIcon(icon_widoki);
+                            clickedMarker = e.target;                                
+                            }
+                                else if (icon_ognisko.name == "ognisko") {
+                                    e.target.setIcon(icon_ognisko);
+                            clickedMarker = e.target;                                
+                            } 
+                                else if (icon_stadnina.name == "stadnina") {
+                                    e.target.setIcon(icon_stadnina);
+                            clickedMarker = e.target;                                
+                            } 
+                        
+                        info.update(layer.feature.properties);
+                    }
+
+            function resetHighlight(e) {
+                        geoJsonLayer.resetStyle(e.target);
+                        info.update();
+                    }
+
+            let info = L.control();
+                    info.onAdd = function (map) {
+                            this._div = L.DomUtil.create('div', 'info'); // create a div with a class "info"
+                            this.update();
+                            return this._div;
+                        };
+
+                            // method that we will use to update the control based on feature properties passed
+                info.update = function (props) {
+                            this._div.innerHTML = '<h3><center> Mapa Ogólnotematyczna </center></h3>' +  (props ?
+                            '<center><b>' + props.name + '</b></center> <div id="close"> </div> <center> <img src="./dokumentacja/'
+                                + props.Id + '.jpg" width="350px"/> </center> <a href="dokumentacja/'
+                                + props.Id + '.jpg" data-lightbox="a' + props.Id + '"><center><div id="przycisk"> Galeria </div></center></a>'
+                                : '<center>Kliknij na dowolną syganture </center>');
+                        };
+                    info.addTo(map);
+
+           /* function createCustomIcon (feature, latlng) {
+                let myIcon = L.icon({
+                    iconUrl: 'sygantury/ogrod_dendrologiczny.svg',
+                    iconSize: [33, 33],  
+                })
+                    return L.marker(latlng, { icon: myIcon })
+                }
+                let myLayerOptions = {
+                pointToLayer: createCustomIcon
+                }
+                L.geoJSON(kolowo_kosciol, myLayerOptions).addTo(map); */
+
+            let information_jeziora_bez_nazwy = L.geoJson(tereny_wodne, {style: style_tereny_wodne, onEachFeature: function onEachFeature(feature, layer) {
+							if(feature.properties && feature.properties.ZB_NAZWA) {
+								layer.bindPopup('Jezioro: ' + feature.properties.ZB_NAZWA + '<br>' 
+									);
+									} else if (feature.properties && feature.properties.ZB_NAZWA == null) {
+                                        layer.bindPopup('Nie znaleziono nazwy :(' + '<br>' 
+									); 
+                                    }
+                                }}).addTo(map);
+
+            let information_golfa = L.geoJson(kompleksy, {style: style_kompleksy, onEachFeature: function onEachFeature(feature, layer) {
+							if(feature.properties && "OT_KUSK_A.113" == feature.properties.GMLID) {
+								layer.bindPopup('Pole Golfowe' 
+									);
+									} 
+                                }}).addTo(map);
+        
+        
+                   // </a href="./dokumentacja/0004.JPG" data-lightbox="a0004"></a> 
+               
+        </script>
+        <a href="./dokumentacja/1001.JPG" data-lightbox="a0001"></a> 
+
+        <a href="./dokumentacja/3001.JPG" data-lightbox="a0003"></a>
+        <a href="./dokumentacja/3002.JPG" data-lightbox="a0003"></a>
+        <a href="./dokumentacja/3003.JPG" data-lightbox="a0003"></a>
+        <a href="./dokumentacja/3004.JPG" data-lightbox="a0003"></a>
+
+        <a href="./dokumentacja/2001.JPG" data-lightbox="a2004"></a>
+        <a href="./dokumentacja/2002.JPG" data-lightbox="a2004"></a>
+        <a href="./dokumentacja/2003.JPG" data-lightbox="a2004"></a>
+        <a href="./dokumentacja/2004.JPG" data-lightbox="a2004"></a>
+        <a href="./dokumentacja/2005.JPG" data-lightbox="a2004"></a>
+        <a href="./dokumentacja/2006.JPG" data-lightbox="a2004"></a>
+
+        <a href="./dokumentacja/4010.JPG" data-lightbox="a4000"></a>
+        <a href="./dokumentacja/4020.JPG" data-lightbox="a4000"></a>
+        <a href="./dokumentacja/4030.JPG" data-lightbox="a4000"></a>
+        <a href="./dokumentacja/4011.JPG" data-lightbox="a4001"></a>
+        <a href="./dokumentacja/4013.JPG" data-lightbox="a4001"></a>
+        <a href="./dokumentacja/4014.JPG" data-lightbox="a4001"></a>
+        <a href="./dokumentacja/4015.JPG" data-lightbox="a4001"></a>
+        <a href="./dokumentacja/4016.JPG" data-lightbox="a4001"></a>
+        <a href="./dokumentacja/4021.JPG" data-lightbox="a4001"></a>
+        <a href="./dokumentacja/4022.JPG" data-lightbox="a4001"></a>
+
+        <a href="./dokumentacja/6001.JPG" data-lightbox="a6000"></a>
+        <a href="./dokumentacja/6002.JPG" data-lightbox="a6000"></a>
+        <a href="./dokumentacja/6003.JPG" data-lightbox="a6000"></a>
+        <a href="./dokumentacja/6004.JPG" data-lightbox="a6000"></a>
+        <a href="./dokumentacja/6005.JPG" data-lightbox="a6000"></a>
+        <a href="./dokumentacja/6006.JPG" data-lightbox="a6000"></a>
+
+        <a href="./dokumentacja/8021.JPG" data-lightbox="a8001"></a>
+        <a href="./dokumentacja/8031.JPG" data-lightbox="a8001"></a>
+        <a href="./dokumentacja/8041.JPG" data-lightbox="a8001"></a>
+        <a href="./dokumentacja/8022.JPG" data-lightbox="a8000"></a>
+
+        <a href="./dokumentacja/9001.JPG" data-lightbox="a9000"></a>
+
+        <a href="./dokumentacja/10010.JPG" data-lightbox="a10000"></a>
+        <a href="./dokumentacja/10001.JPG" data-lightbox="a10001"></a>
+        <a href="./dokumentacja/10002.JPG" data-lightbox="a10001"></a>
+        <a href="./dokumentacja/10003.JPG" data-lightbox="a10001"></a>
+        <a href="./dokumentacja/10004.JPG" data-lightbox="a10001"></a>
+
+        <a href="./dokumentacja/12001.JPG" data-lightbox="a12000"></a>
+        <a href="./dokumentacja/12002.JPG" data-lightbox="a12000"></a>
+
+        <a href="./dokumentacja/13014.JPG" data-lightbox="a13004"></a>
+        <a href="./dokumentacja/13024.JPG" data-lightbox="a13004"></a>
+        <a href="./dokumentacja/13034.JPG" data-lightbox="a13004"></a>
+        <a href="./dokumentacja/13044.JPG" data-lightbox="a13004"></a>
+        <a href="./dokumentacja/13054.JPG" data-lightbox="a13004"></a>
+        
+    </div>
+    
+</body>
+</html>

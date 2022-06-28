@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="24.294371mm"
+   height="4.5955mm"
+   viewBox="0 0 86.082423 16.283268"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
+   sodipodi:docname="napis_jezioro_binowskie.svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="3.7333333"
+     inkscape:cx="41.558286"
+     inkscape:cy="32.510246"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1366"
+     inkscape:window-height="705"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     showguides="false"
+     inkscape:guide-bbox="true">
+    <sodipodi:guide
+       position="0.41113956,92.806974"
+       orientation="0,1"
+       id="guide9141"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="0.41113956,92.806974"
+       orientation="1,0"
+       id="guide9143"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="4.578019,92.806974"
+       orientation="1,0"
+       id="guide9145"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="0.41113956,85.609634"
+       orientation="0,1"
+       id="guide9147"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="8.5554953,75.950044"
+       orientation="1,0"
+       id="guide9149"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="12.911779,69.510324"
+       orientation="1,0"
+       id="guide9151"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="17.078657,69.699734"
+       orientation="1,0"
+       id="guide9153"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="20.866729,66.479874"
+       orientation="1,0"
+       id="guide9155"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="-19.286836,78.601704"
+       orientation="0,1"
+       id="guide9157"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="-55.273524,71.214964"
+       orientation="0,1"
+       id="guide9159"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="24.654802,78.601704"
+       orientation="1,0"
+       id="guide9379"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-129.86136,-101.46012)">
+    <rect
+       style="opacity:1;fill:#22cce2;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.2202827;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect4138"
+       width="16.800934"
+       height="86.081985"
+       x="101.58556"
+       y="-214.72923"
+       transform="matrix(0.01241193,0.99992297,-0.99999965,8.4059384e-4,0,0)" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.98783684px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000090;fill-opacity:1;stroke:none;stroke-width:0.93749994"
+       x="152.56764"
+       y="97.908829"
+       id="text1649"
+       transform="scale(0.86371696,1.1577867)"><tspan
+         sodipodi:role="line"
+         id="tspan1647"
+         x="152.56764"
+         y="97.908829"
+         style="fill:#000090;fill-opacity:1;stroke-width:0.93749994">Jezioro Binowskie</tspan></text>
+  </g>
+</svg>
